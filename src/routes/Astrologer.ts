@@ -9,9 +9,10 @@ const router = express.Router();
 router.post("/astrologers/register", astrologerController.register);
 
 router.get("/astrologers", astrologerController.getAstrologers);
+router.get("/my-astrologers/:id", astrologerController.getMyAstrologers);
 
 router.patch("/astrologers/:id", astrologerController.updateAstrologer);
 
-router.delete("/astrologers/:id/", astrologerController.deleteAstrologer);
+router.delete("/astrologers/:id", astrologerController.deleteAstrologer);
 
 export default router;
